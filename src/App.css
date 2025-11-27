@@ -1,6 +1,6 @@
 body {
     font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #4a90e2, #007aff);
+    background: linear-gradient(135deg, #9b5de5, #f15bb5);
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-    color: #1f2937;
+    color: #3a2e5f;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -38,8 +38,8 @@ h1 {
 .filters button {
     padding: 8px 18px;
     border: none;
-    background: #e5e7eb;
-    color: #374151;
+    background: #e9e1f8;
+    color: #5a4a7b;
     border-radius: 25px;
     font-size: 14px;
     font-weight: 500;
@@ -48,11 +48,11 @@ h1 {
 }
 
 .filters button:hover {
-    background: #d1d5db;
+    background: #d8c8f4;
 }
 
 .filters button.active {
-    background: #007aff;
+    background: #9b5de5;
     color: #ffffff;
 }
 
@@ -60,29 +60,29 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f9fafb;
+    background: #faf5fe;
     padding: 14px 16px;
     margin-bottom: 14px;
     border-radius: 14px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e5d9fb;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .todo:hover {
-    background: #f3f4f6;
+    background: #f3e8ff;
     transform: translateY(-1px);
 }
 
 .todo.completed {
     text-decoration: line-through;
-    color: #9ca3af;
+    color: #a59bbc;
     opacity: 0.75;
 }
 
 .todo button {
     padding: 6px 12px;
     border: none;
-    background: #10b981;
+    background: #7b2cbf;
     color: #ffffff;
     border-radius: 8px;
     cursor: pointer;
@@ -91,16 +91,16 @@ h1 {
 }
 
 .todo button:hover {
-    background: #059669;
+    background: #5a189a;
     transform: scale(1.07);
 }
 
 .todo .delete-btn {
-    background: #ef4444;
+    background: #f15bb5;
 }
 
 .todo .delete-btn:hover {
-    background: #dc2626;
+    background: #c91875;
 }
 
 .input-row {
@@ -112,20 +112,20 @@ h1 {
 input {
     padding: 12px 14px;
     width: 100%;
-    border: 1px solid #d1d5db;
+    border: 1px solid #d1b3f3;
     border-radius: 10px;
     font-size: 15px;
     transition: border 0.2s ease;
 }
 
 input:focus {
-    border-color: #007aff;
+    border-color: #9b5de5;
     outline: none;
 }
 
 button.add-btn {
     padding: 12px 18px;
-    background: #007aff;
+    background: #9b5de5;
     color: white;
     border-radius: 10px;
     font-size: 14px;
@@ -136,7 +136,7 @@ button.add-btn {
 }
 
 button.add-btn:hover {
-    background: #005fcc;
+    background: #7a2fd1;
     transform: scale(1.05);
 }
 
