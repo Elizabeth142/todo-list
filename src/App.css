@@ -1,0 +1,104 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+    /* teal → blue */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.app {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+h1 {
+    color: #2d3436;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    padding: 8px 16px;
+    border: none;
+    background: linear-gradient(315deg, #f2994a 0%, #f2c94c 74%);
+    /* orange gradient */
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.filters button:hover {
+    background: linear-gradient(315deg, #f2c94c 0%, #f2994a 74%);
+    transform: scale(1.05);
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ecf0f1;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.todo button {
+    margin-left: 5px;
+    padding: 6px 10px;
+    border: none;
+    background: #27ae60;
+    /* green */
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.todo button:hover {
+    background: #1e8449;
+    transform: scale(1.1);
+}
+
+.todo.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+input {
+    padding: 10px;
+    width: 65%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #e67e22;
+    /* orange accent */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #d35400;
+    transform: scale(1.05);
+}
