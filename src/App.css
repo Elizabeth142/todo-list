@@ -1,104 +1,153 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #56ccf2, #2f80ed);
-    /* teal → blue */
+    font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4a90e2, #007aff);
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
 }
 
 .app {
-    max-width: 500px;
-    margin: 50px auto;
-    background: white;
-    padding: 30px 20px;
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    padding: 32px 28px;
     border-radius: 20px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
-    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 0.4s ease;
 }
 
 h1 {
-    color: #2d3436;
-    margin-bottom: 20px;
+    color: #1f2937;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
 }
 
 .filters {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
 .filters button {
-    padding: 8px 16px;
+    padding: 8px 18px;
     border: none;
-    background: linear-gradient(315deg, #f2994a 0%, #f2c94c 74%);
-    /* orange gradient */
-    color: white;
+    background: #e5e7eb;
+    color: #374151;
     border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .filters button:hover {
-    background: linear-gradient(315deg, #f2c94c 0%, #f2994a 74%);
-    transform: scale(1.05);
+    background: #d1d5db;
+}
+
+.filters button.active {
+    background: #007aff;
+    color: #ffffff;
 }
 
 .todo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ecf0f1;
-    padding: 12px 15px;
-    margin-bottom: 12px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    background: #f9fafb;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.todo button {
-    margin-left: 5px;
-    padding: 6px 10px;
-    border: none;
-    background: #27ae60;
-    /* green */
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.todo button:hover {
-    background: #1e8449;
-    transform: scale(1.1);
+.todo:hover {
+    background: #f3f4f6;
+    transform: translateY(-1px);
 }
 
 .todo.completed {
     text-decoration: line-through;
-    color: gray;
-    opacity: 0.7;
+    color: #9ca3af;
+    opacity: 0.75;
+}
+
+.todo button {
+    padding: 6px 12px;
+    border: none;
+    background: #10b981;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 13px;
+}
+
+.todo button:hover {
+    background: #059669;
+    transform: scale(1.07);
+}
+
+.todo .delete-btn {
+    background: #ef4444;
+}
+
+.todo .delete-btn:hover {
+    background: #dc2626;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 input {
-    padding: 10px;
-    width: 65%;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 12px 14px;
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border 0.2s ease;
 }
 
-button {
-    padding: 10px 15px;
-    border: none;
-    background: #e67e22;
-    /* orange accent */
+input:focus {
+    border-color: #007aff;
+    outline: none;
+}
+
+button.add-btn {
+    padding: 12px 18px;
+    background: #007aff;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 
-button:hover {
-    background: #d35400;
+button.add-btn:hover {
+    background: #005fcc;
     transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
